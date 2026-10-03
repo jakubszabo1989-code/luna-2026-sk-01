@@ -92,6 +92,18 @@
             border-radius: 8px;
             border-left: 4px solid #3b82f6;
         }
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .contact-item a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
         .btn-check {
             background-color: #3b82f6;
             color: white;
@@ -122,10 +134,11 @@
         <strong>Modul:</strong> Tréning mozgu a psychotechnická príprava
     </div>
 
-    <!-- Tlačidlá dvoch hlavných záložiek -->
+    <!-- Tlačidlá troch hlavných záložiek -->
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
         <button class="tab-button" onclick="openTab(event, 'autor')">👤 Profil</button>
+        <button class="tab-button" onclick="openTab(event, 'kontakt')">📞 Kontakt</button>
     </div>
 
     <!-- OBSAH 1: PSYCHOTESTY -->
@@ -181,12 +194,26 @@
         </div>
     </div>
 
-    <!-- OBSAH 2: PROFIL (TVOJ UČESANÝ TEXT) -->
+    <!-- OBSAH 2: PROFIL -->
     <div id="autor" class="tab-content">
         <h2>Kto som?</h2>
         <div class="profile-box">
-            <p>Som chlapec, ktorý kvôli svojmu zdravotnému stavu nemohol osobne pracovať v ozbrojených zložkách. Moja vášeň pre túto oblasť ma však neopustila. Na základe svojich doterajších pracovných skúseností z jednotlivých zložiek a hlbokého porozumenia ich fungovania som vytvoril tento unikátny tréningový plán.</p>
+            <p>Som chlapec, ktorý kvôli svojmu zdravotnému stavu nemohol osone pracovať v ozbrojených zložkách. Moja vášeň pre túto oblasť ma však neopustili. Na základe svojich doterajších pracovných skúseností z jednotlivých zložiek a hlbokého porozumenia ich fungovania som vytvoril tento unikátny tréningový plán.</p>
             <p>Keďže psychotesty pre uchádzačov do ozbrojených zložiek a pre šoférov sú mimoriadne náročné, rozhodol som sa pomáhať ľuďom s ich komplexnou prípravou. Celý tento kurz a testovacie úlohy som vymyslel a zostavil úplne sám na základe svojich reálnych skúseností z praxe, aby som pomohol ostatným úspešne zvládnuť toto náročné sito.</p>
+        </div>
+    </div>
+
+    <!-- OBSAH 3: KONTAKT -->
+    <div id="kontakt" class="tab-content">
+        <h2>Máte záujem o prípravu alebo otázky?</h2>
+        <p>Neváhajte ma kontaktovať. Rád vám pomôžem s kompletnou prípravou na úspešné zvládnutie psychotestov.</p>
+        <div class="profile-box" style="border-left-color: #ef4444;">
+            <div class="contact-item">
+                📞 <strong>Telefónne číslo:</strong> <a href="tel:0948423055">0948 423 055</a>
+            </div>
+            <div class="contact-item">
+                ✉️ <strong>E-mailová adresa:</strong> <a href="mailto:jakub.szabo1989@gmail.com">jakub.szabo1989@gmail.com</a>
+            </div>
         </div>
     </div>
 </div>
