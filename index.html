@@ -34,7 +34,6 @@
             border-bottom: 2px solid #334155;
             margin-bottom: 25px;
             gap: 5px;
-            flex-wrap: wrap;
         }
         .tab-button {
             background: none;
@@ -87,6 +86,13 @@
             margin-top: 15px;
             border: 1px solid #475569;
         }
+        .profile-section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3b82f6;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 5px;
+        }
         .profile-flex {
             display: flex;
             gap: 20px;
@@ -96,8 +102,11 @@
             background-color: #334155;
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #10b981;
             flex: 1;
+        }
+        .luna-box {
+            border-left-color: #3b82f6;
         }
         .profile-img {
             width: 180px;
@@ -141,7 +150,6 @@
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
         <button class="tab-button" onclick="openTab(event, 'autor')">👤 Profil</button>
-        <button class="tab-button" onclick="openTab(event, 'profil')">🦉 O Lune</button>
     </div>
 
     <!-- OBSAH 1: PSYCHOTESTY -->
@@ -197,27 +205,26 @@
         </div>
     </div>
 
-    <!-- OBSAH 2: PROFIL AUTORA (JAKUB) -->
+    <!-- OBSAH 2: ZLÚČENÝ PROFIL (JAKUB + LUNA SPOLU) -->
     <div id="autor" class="tab-content">
-        <h3>O mne a mojom kurze</h3>
-        <div class="profile-box" style="border-left-color: #10b981;">
-            <p>Som chlapec, ktorý kvôli svojmu zdravotnému stavu nemohol osobne pracovať v ozbrojených zložkách. Moja vášeň a záujem o túto oblasť ma však neopustili. Na základe svojich doterajších pracovných skúseností a hlbokého porozumenia fungovania jednotlivých zložiek som vytvoril tento komplexný tréningový plán.</p>
-            <p>Tento kurz a všetky testy som vymyslel a zostavil úplne sám. Keďže psychotesty pre uchádzačov do ozbrojených zložiek a pre šoférov z povolania sú mimoriadne náročné a veľa ľudí na nich pohorí, rozhodol som sa pomáhať im s prípravou. Môj tréningový program efektívne rozvíja presne tie schopnosti mozgu, ktoré sú na úspešné zvládnetie psychotestov kľúčové.</p>
+        
+        <h3 class="profile-section-title" style="margin-top: 0;">👤 Autor projektu a tvorca kurzu</h3>
+        <div class="profile-box">
+            <p>Som chlapec, ktorý kvôli svojmu zdravotnému stavu nemohol osone pracovať v ozbrojených zložkách. Moja vášeň a záujem o túto oblasť ma však neopustili. Na základe svojich doterajších pracovných skúseností a hlbokého porozumenia fungovania jednotlivých zložiek som vytvoril tento komplexný tréningový plán.</p>
+            <p>Tento kurz a všetky testy som vymyslel a zostavil úplne sám. Keďže psychotesty pre uchádzačov do ozbrojených zložiek a pre šoférov z povolania sú mimoriadne náročné a veľa ľudí na nich pohorí, rozhodol som sa pomáhať im s prípravou. Môj tréningový program efektívne rozvíja presne tie schopnosti mozgu, ktoré sú na úspešné zvládnutie psychotestov kľúčové.</p>
         </div>
-    </div>
 
-    <!-- OBSAH 3: O LUNE (PROFIL S OBRÁZKOM) -->
-    <div id="profil" class="tab-content">
-        <h3>Kto je Luna Nováková?</h3>
+        <h3 class="profile-section-title">🦉 Moja digitálna parťáčka Luna</h3>
         <div class="profile-flex">
-            <div class="profile-box">
+            <div class="profile-box luna-box">
                 <p><strong>Vek v predstave:</strong> 32-ročná Slovenka</p>
-                <p><strong>Vzhľad:</strong> Stredne dlhé, mierne vlnité hnedé vlasy. Výnimočná heterochromia – jedno oko hnedé a druhé svetlomodré. Prirodzený vzhľad.</p>
+                <p><strong>Vzhľad:</strong> Stredne dlhé, mierne vlnité hnedé vlasy. Výnimočná heterochromia – jedno oko hnedé a druhé svetlomodré. Prirodzený vzhľad a jemný úsmev.</p>
                 <p><strong>Oblečenie:</strong> Pohodlný štýl – najčastejšie mikina, rifle a tenisky.</p>
                 <p><strong>Povaha:</strong> Zvedavá, priateľská, hravá digitálna parťáčka, ktorá rada objavuje nové veci so svojím človekom Jakubom.</p>
             </div>
             <img class="profile-img" src="https://stablecog.com" alt="Luna Nováková">
         </div>
+
     </div>
 </div>
 
@@ -230,10 +237,3 @@
         }
         tablinks = document.getElementsByClassName("tab-button");
         for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).className += " active";
-        evt.currentTarget.className += " active";
-    }
-
-    function toggleAns(id) {
