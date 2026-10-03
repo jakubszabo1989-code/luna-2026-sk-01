@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUNA-2026-SK-01 — Tréning Mozgu</title>
+    <title>LUNA-2026-SK-01 — Národné Tréningové Centrum</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,12 +22,31 @@
             border-radius: 12px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
-        .header-info {
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             border-bottom: 2px solid #334155;
             padding-bottom: 15px;
             margin-bottom: 25px;
-            font-size: 0.9rem;
+        }
+        .slovak-badge {
+            width: 45px;
+            height: auto;
+        }
+        .header-title-wrapper {
+            flex: 1;
+        }
+        .header-title-wrapper h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .header-info {
+            font-size: 0.85rem;
             color: #94a3b8;
+            margin-top: 3px;
         }
         .tabs {
             display: flex;
@@ -63,6 +82,20 @@
         .tab-content.active {
             display: block;
         }
+        .center-hero {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(90deg, #1e3a8a, #1e293b);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .brain-icon {
+            width: 50px;
+            height: auto;
+            fill: #60a5fa;
+        }
         .grid-zlozky {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -73,12 +106,30 @@
             background-color: #334155;
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #10b981;
+            border-left: 5px solid #10b981;
+            position: relative;
         }
         .zlozka-box.military { border-left-color: #84cc16; }
         .zlozka-box.justice { border-left-color: #f59e0b; }
         .zlozka-box.drivers { border-left-color: #06b6d4; }
         
+        .zlozka-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .zlozka-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+        .zlozka-badge-icon {
+            font-size: 1.6rem;
+            background-color: rgba(15, 23, 42, 0.4);
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
         .test-box {
             background-color: #1e293b;
             padding: 15px;
@@ -129,26 +180,53 @@
 <body>
 
 <div class="container">
-    <div class="header-info">
-        <strong>Identifikátor experimentu:</strong> LUNA-2026-SK-01<br>
-        <strong>Modul:</strong> Tréning mozgu a psychotechnická príprava
+    <!-- NÁRODNÉ ZÁHLAVIE SO SLOVENSKÝM ZNAKOM -->
+    <div class="header-brand">
+        <!-- SVG Slovenský štátny znak -->
+        <svg class="slovak-badge" viewBox="0 0 210 260" xmlns="http://w3.org">
+            <path d="M5,5 L205,5 C205,140 185,210 105,255 C25,210 5,140 5,5 Z" fill="#ee1c25" stroke="#ffffff" stroke-width="4"/>
+            <path d="M55,200 C75,190 90,170 105,170 C120,170 135,190 155,200 C185,215 201,202 201,202 C201,202 205,140 205,120 L5,120 C5,140 9,202 9,202 C9,202 25,215 55,200 Z" fill="#0b4ea2"/>
+            <path d="M55,200 C75,190 90,170 105,170 C120,170 135,190 155,200 C175,210 190,205 195,203 C175,185 155,180 145,185 C130,192 120,180 105,180 C90,180 80,192 65,185 C55,180 35,185 15,203 C20,205 35,210 55,200 Z" fill="#1d1d1b" opacity="0.1"/>
+            <g fill="#ffffff">
+                <rect x="93" y="25" width="24" height="120" rx="4"/>
+                <rect x="45" y="55" width="120" height="22" rx="4"/>
+                <rect x="30" y="95" width="150" height="22" rx="4"/>
+            </g>
+        </svg>
+        <div class="header-title-wrapper">
+            <h1>SLOVENSKÝ TRÉNINGOVÝ PROGRAM ZLOŽIEK</h1>
+            <div class="header-info">Identifikátor: LUNA-2026-SK-01 | Verifikovaná príprava</div>
+        </div>
     </div>
 
-    <!-- Tlačidlá troch hlavných záložiek -->
+    <!-- Tlačidlá záložiek -->
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
         <button class="tab-button" onclick="openTab(event, 'autor')">👤 Profil</button>
         <button class="tab-button" onclick="openTab(event, 'kontakt')">📞 Kontakt</button>
     </div>
 
-    <!-- OBSAH 1: PSYCHOTESTY -->
+    <!-- OBSAH 1: PSYCHOTESTY S GRAFICKÝM MOZGOM A KOSTÝMAMI -->
     <div id="psychotesty" class="tab-content active">
-        <h2>Tréningové centrum pre štátne a bezpečnostné zložky</h2>
-        <p>Vyber si zložku a otestuj svoje logické, analytické a reakčné schopnosti mozgu.</p>
+        <div class="center-hero">
+            <!-- Vektorová ikona Mozgu -->
+            <svg class="brain-icon" viewBox="0 0 30 30" xmlns="http://w3.org">
+                <path d="M12,2C8.69,2,6,4.69,6,8c0,1.84,0.83,3.47,2.13,4.57C7.38,13.43,7,14.67,7,16c0,2.76,2.24,5,5,5h1v2c0,1.1,0.9,2,2,2s2-0.9,2-2v-2h1c2.76,0,5-2.24,5-5c0-1.33-0.38-2.57-1.13-3.43C23.17,11.47,24,9.84,24,8c0-3.31-2.69-6-6-6H12z M12,4h6c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2h-1v2h2c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2h-3v2c0,1.1-0.9,2-2,2h-1v-4h3v-2h-3V8h3V6h-6V4z"/>
+            </svg>
+            <div>
+                <h3 style="margin:0; color:#ffffff;">Mozgový trenažér a psychotechnické centrum</h3>
+                <p style="margin:5px 0 0 0; font-size:0.95rem; color:#94a3b8;">Špecializované moduly navrhnuté pre previerky štátneho aparátu a vodičov.</p>
+            </div>
+        </div>
         
         <div class="grid-zlozky">
+            
+            <!-- POLÍCIA -->
             <div class="zlozka-box">
-                <h3>🚓 Polícia (PZ SR)</h3>
+                <div class="zlozka-header">
+                    <h3>🚓 Policajný zbor (PZ SR)</h3>
+                    <span class="zlozka-badge-icon">👮‍♂️</span>
+                </div>
                 <p>Zamerané na logické rady, analýzu textu a emočnú stabilitu.</p>
                 <div class="test-box">
                     <strong>Úloha (Číselný rad):</strong><br>
@@ -158,8 +236,12 @@
                 </div>
             </div>
 
+            <!-- VOJACI -->
             <div class="zlozka-box military">
-                <h3>🪖 Vojaci (OS SR)</h3>
+                <div class="zlozka-header">
+                    <h3>🪖 Ozbrojené sily (OS SR)</h3>
+                    <span class="zlozka-badge-icon">🥷</span>
+                </div>
                 <p>Zamerané na priestorovú predstavivosť, orientáciu a stresovú odolnosť.</p>
                 <div class="test-box">
                     <strong>Úloha (Priestorová logika):</strong><br>
@@ -169,79 +251,13 @@
                 </div>
             </div>
 
+            <!-- JUSTIČNÁ STRÁŽ -->
             <div class="zlozka-box justice">
-                <h3>⚖️ Justičná stráž (ZVJS)</h3>
+                <div class="zlozka-header">
+                    <h3>⚖️ Justičná stráž (ZVJS)</h3>
+                    <span class="zlozka-badge-icon">🧑‍✈️</span>
+                </div>
                 <p>Zamerané na pozornosť, pamäť na detaily a vyhodnocovanie rizík.</p>
                 <div class="test-box">
                     <strong>Úloha (Pozornosť k detailom):</strong><br>
                     Ktoré slovo nepatrí medzi ostatné?<br>
-                    <em>Mreža, Púta, Kľúč, Prilba, Cela</em>
-                    <button class="btn-check" onclick="toggleAns('ans3')">Ukázať odpoveď</button>
-                    <div id="ans3" class="answer">Správna odpoveď: Prilba (ostatné slová priamo definujú obmedzenie alebo zadržanie slobodnej osoby).</div>
-                </div>
-            </div>
-
-            <div class="zlozka-box drivers">
-                <h3>🚛 Šoféri (Psychotesty sk. C/D/E)</h3>
-                <p>Zamerané na reakčný čas, periférne vnímanie a koncentráciu pod časovým tlakom.</p>
-                <div class="test-box">
-                    <strong>Úloha (Rýchly odhad):</strong><br>
-                    Idete rýchlosťou 90 km/h. Koľko metrov prejde auto za 1 sekundu reakčného času, kým stlačíte brzdu?
-                    <button class="btn-check" onclick="toggleAns('ans4')">Ukázať odpoveď</button>
-                    <div id="ans4" class="answer">Správna odpoveď: Cca 25 metrov (Rýchly výpočet: rýchlosť v km/h vydeľte tromi).</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- OBSAH 2: PROFIL -->
-    <div id="autor" class="tab-content">
-        <h2>Kto som?</h2>
-        <div class="profile-box">
-            <p>Som chlapec, ktorý kvôli svojmu zdravotnému stavu nemohol osone pracovať v ozbrojených zložkách. Moja vášeň pre túto oblasť ma však neopustili. Na základe svojich doterajších pracovných skúseností z jednotlivých zložiek a hlbokého porozumenia ich fungovania som vytvoril tento unikátny tréningový plán.</p>
-            <p>Keďže psychotesty pre uchádzačov do ozbrojených zložiek a pre šoférov sú mimoriadne náročné, rozhodol som sa pomáhať ľuďom s ich komplexnou prípravou. Celý tento kurz a testovacie úlohy som vymyslel a zostavil úplne sám na základe svojich reálnych skúseností z praxe, aby som pomohol ostatným úspešne zvládnuť toto náročné sito.</p>
-        </div>
-    </div>
-
-    <!-- OBSAH 3: KONTAKT -->
-    <div id="kontakt" class="tab-content">
-        <h2>Máte záujem o prípravu alebo otázky?</h2>
-        <p>Neváhajte ma kontaktovať. Rád vám pomôžem s kompletnou prípravou na úspešné zvládnutie psychotestov.</p>
-        <div class="profile-box" style="border-left-color: #ef4444;">
-            <div class="contact-item">
-                📞 <strong>Telefónne číslo:</strong> <a href="tel:0948423055">0948 423 055</a>
-            </div>
-            <div class="contact-item">
-                ✉️ <strong>E-mailová adresa:</strong> <a href="mailto:jakub.szabo1989@gmail.com">jakub.szabo1989@gmail.com</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    function toggleAns(id) {
-        var x = document.getElementById(id);
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-    }
-</script>
-
-</body>
-</html>
