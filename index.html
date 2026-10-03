@@ -78,7 +78,6 @@
             line-height: 1.6;
             font-size: 1.05rem;
         }
-        /* Zabezpečí, aby bola prvá záložka viditeľná pri načítaní */
         #psychotesty {
             display: block;
         }
@@ -176,7 +175,6 @@
 <body>
 
 <div class="container">
-    <!-- NÁRODNÉ ZÁHLAVIE SO SLOVENSKÝM ZNAKOM -->
     <div class="header-brand">
         <svg class="slovak-badge" viewBox="0 0 210 260" xmlns="http://w3.org">
             <path d="M5,5 L205,5 C205,140 185,210 105,255 C25,210 5,140 5,5 Z" fill="#ee1c25" stroke="#ffffff" stroke-width="4"/>
@@ -194,7 +192,7 @@
         </div>
     </div>
 
-    <!-- Tlačidlá záložiek -->
+    <!-- Tlačidlá -->
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
         <button class="tab-button" onclick="openTab(event, 'profil')">👤 Profil</button>
@@ -250,7 +248,11 @@
                 <p>Zamerané na pozornosť, pamäť na detaily a vyhodnocovanie rizík.</p>
                 <div class="test-box">
                     <strong>Úloha (Pozornosť k detailom):</strong><br>
-                    Ktoré slovo nepatrir medzi ostatné?<br>
+                    Ktoré slovo nepatrí medzi ostatné?<br>
                     <em>Mreža, Púta, Kľúč, Prilba, Cela</em>
                     <button class="btn-check" onclick="toggleAns('ans3')">Ukázať odpoveď</button>
-                    <div id="ans3" class="answer">Správna odpoveď: Prilba (ostatné
+                    <div id="ans3" class="answer">Správna odpoveď: Prilba (ostatné slová priamo definujú obmedzenie alebo zadržanie slobodnej osoby).</div>
+                </div>
+            </div>
+
+            <div class="zlozka-box drivers">
