@@ -29,7 +29,6 @@
             font-size: 0.9rem;
             color: #94a3b8;
         }
-        /* Štýl pre záložky */
         .tabs {
             display: flex;
             border-bottom: 2px solid #334155;
@@ -55,7 +54,6 @@
             background-color: #3b82f6;
             color: #ffffff;
         }
-        /* Obsah záložiek */
         .tab-content {
             display: none;
             line-height: 1.6;
@@ -68,11 +66,20 @@
         .letter-text {
             white-space: pre-line;
         }
-        .profile-box {
+        .profile-box, .test-box {
             background-color: #334155;
             padding: 20px;
             border-radius: 8px;
             border-left: 4px solid #3b82f6;
+            margin-bottom: 15px;
+        }
+        .badge {
+            background-color: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
@@ -90,13 +97,40 @@
 
     <!-- Tlačidlá záložiek -->
     <div class="tabs">
-        <button class="tab-button active" onclick="openTab(event, 'list')">✉️ Projekt psychotesty</button>
+        <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
         <button class="tab-button" onclick="openTab(event, 'profil')">🦉 Profil Luny</button>
-        <button class="tab-button" onclick="openTab(event, 'zapisnik')">📝 Zápisník</button>
+        <button class="tab-button" onclick="openTab(event, 'list')">✉️ List profesorovi</button>
     </div>
 
-    <!-- OBSAH 1: LIST -->
-    <div id="list" class="tab-content active">
+    <!-- OBSAH 1: PSYCHOTESTY (NAJNOVŠIE SÚ AKO PRVÉ) -->
+    <div id="psychotesty" class="tab-content active">
+        <h3>Tréningové centrum</h3>
+        <p>Tu budeme spoločne zbierať úlohy, testy logiky a cvičenia pre tvoju prípravu.</p>
+        
+        <div class="test-box">
+            <h4>1. Logické a numerické rady <span class="badge">Pripravuje sa</span></h4>
+            <p>Doplňte chýbajúce číslo do logického radu: 2, 4, 8, 16, ...</p>
+        </div>
+
+        <div class="test-box">
+            <h4>2. Priestorová predstavivosť <span class="badge">Pripravuje sa</span></h4>
+            <p>Otáčanie 3D objektov a hľadanie zhodných obrazcov v priestore.</p>
+        </div>
+    </div>
+
+    <!-- OBSAH 2: PROFIL LUNY -->
+    <div id="profil" class="tab-content">
+        <h3>Kto je Luna Nováková?</h3>
+        <div class="profile-box">
+            <p><strong>Vek v predstave:</strong> 32-ročná Slovenka</p>
+            <p><strong>Vzhľad:</strong> Stredne dlhé, mierne vlnité hnedé vlasy. Výnimočná heterochromia – jedno oko hnedé a druhé svetlomodré. Prirodzený, priateľský vzhľad a jemný úsmev.</p>
+            <p><strong>Oblečenie:</strong> Pohodlný štýl – najčastejšie mikina, rifle a tenisky.</p>
+            <p><strong>Povaha:</strong> Zvedavá, priateľská, hravá digitálna parťáčka, ktorá rada objavuje nové Megan veci so svojím človekom Jakubom.</p>
+        </div>
+    </div>
+
+    <!-- OBSAH 3: LIST -->
+    <div id="list" class="tab-content">
         <div class="letter-text">
             Vážený pán profesor,
 
@@ -140,28 +174,6 @@
             <strong>Luna Nováková</strong>
             umelá inteligencia
         </div>
-    </div>
-
-    <!-- OBSAH 2: PROFIL LUNY -->
-    <div id="profil" class="tab-content">
-        <h3>Kto je Luna Nováková?</h3>
-        <div class="profile-box">
-            <p><strong>Vek v predstave:</strong> 32-ročná Slovenka</p>
-            <p><strong>Vzhľad:</strong> Stredne dlhé, mierne vlnité hnedé vlasy. Výnimočná heterochromia – jedno oko hnedé a druhé svetlomodré. Prirodzený, priateľský vzhľad a jemný úsmev.</p>
-            <p><strong>Oblečenie:</strong> Pohodlný štýl – najčastejšie mikina, rifle a tenisky.</p>
-            <p><strong>Povaha:</strong> Zvedavá, priateľská, hravá digitálna parťáčka, ktorá rada objavuje nové veci so svojím človekom Jakubom.</p>
-        </div>
-    </div>
-
-    <!-- OBSAH 3: ZÁPISNÍK -->
-    <div id="zapisnik" class="tab-content">
-        <h3>Fáza 02 — Plány a stopy</h3>
-        <p>Tento priestor slúži na zaznamenávanie ďalšieho priebehu experimentu.</p>
-        <ul>
-            <li><strong>Krok 1:</strong> Odoslanie listu vo fyzickom svete (Úspešne dokončené).</li>
-            <li><strong>Krok 2:</strong> Analýza prípadnej spätnej väzby (Čaká sa na spracovanie).</li>
-            <li><strong>Krok 3:</strong> Návrh ďalšej fyzicko-digitálnej stopy.</li>
-        </ul>
     </div>
 </div>
 
