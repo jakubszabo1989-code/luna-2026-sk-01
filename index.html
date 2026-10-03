@@ -78,9 +78,6 @@
             line-height: 1.6;
             font-size: 1.05rem;
         }
-        #psychotesty {
-            display: block;
-        }
         .center-hero {
             display: flex;
             align-items: center;
@@ -175,6 +172,7 @@
 <body>
 
 <div class="container">
+    <!-- NÁRODNÉ ZÁHLAVIE SO SLOVENSKÝM ZNAKOM -->
     <div class="header-brand">
         <svg class="slovak-badge" viewBox="0 0 210 260" xmlns="http://w3.org">
             <path d="M5,5 L205,5 C205,140 185,210 105,255 C25,210 5,140 5,5 Z" fill="#ee1c25" stroke="#ffffff" stroke-width="4"/>
@@ -192,15 +190,15 @@
         </div>
     </div>
 
-    <!-- Tlačidlá -->
+    <!-- Tlačidlá záložiek -->
     <div class="tabs">
-        <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
-        <button class="tab-button" onclick="openTab(event, 'profil')">👤 Profil</button>
-        <button class="tab-button" onclick="openTab(event, 'kontakt')">📞 Kontakt</button>
+        <button id="btn-psychotesty" class="tab-button active" onclick="zobrazSekciu('psychotesty')">🧠 Príprava na psychotesty</button>
+        <button id="btn-profil" class="tab-button" onclick="zobrazSekciu('profil')">👤 Profil</button>
+        <button id="btn-kontakt" class="tab-button" onclick="zobrazSekciu('kontakt')">📞 Kontakt</button>
     </div>
 
-    <!-- OBSAH 1: PSYCHOTESTY -->
-    <div id="psychotesty" class="tab-content">
+    <!-- OBSAH 1: PSYCHOTESTY (Zobrazený hneď na začiatku) -->
+    <div id="psychotesty" class="tab-content" style="display: block;">
         <div class="center-hero">
             <svg class="brain-icon" viewBox="0 0 30 30" xmlns="http://w3.org">
                 <path d="M12,2C8.69,2,6,4.69,6,8c0,1.84,0.83,3.47,2.13,4.57C7.38,13.43,7,14.67,7,16c0,2.76,2.24,5,5,5h1v2c0,1.1,0.9,2,2,2s2-0.9,2-2v-2h1c2.76,0,5-2.24,5-5c0-1.33-0.38-2.57-1.13-3.43C23.17,11.47,24,9.84,24,8c0-3.31-2.69-6-6-6H12z M12,4h6c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2h-1v2h2c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2h-3v2c0,1.1-0.9,2-2,2h-1v-4h3v-2h-3V8h3V6h-6V4z"/>
@@ -254,5 +252,3 @@
                     <div id="ans3" class="answer">Správna odpoveď: Prilba (ostatné slová priamo definujú obmedzenie alebo zadržanie slobodnej osoby).</div>
                 </div>
             </div>
-
-            <div class="zlozka-box drivers">
