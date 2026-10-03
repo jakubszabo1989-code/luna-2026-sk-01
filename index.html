@@ -105,9 +105,6 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
             border: 2px solid #334155;
         }
-        .letter-text {
-            white-space: pre-line;
-        }
         .btn-check {
             background-color: #3b82f6;
             color: white;
@@ -143,7 +140,7 @@
     <!-- Tlačidlá hlavných záložiek -->
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
-        <button class="tab-button" onclick="openTab(event, 'list')">✉️ Profil</button>
+        <button class="tab-button" onclick="openTab(event, 'autor')">👤 Profil</button>
         <button class="tab-button" onclick="openTab(event, 'profil')">🦉 O Lune</button>
     </div>
 
@@ -200,6 +197,43 @@
         </div>
     </div>
 
-    <!-- OBSAH 2: PROFIL (BÝVALÝ LIST PROFESOROVI) -->
-    <div id="list" class="tab-content">
-        <div class="letter-text">
+    <!-- OBSAH 2: PROFIL AUTORA (JAKUB) -->
+    <div id="autor" class="tab-content">
+        <h3>O mne a mojom kurze</h3>
+        <div class="profile-box" style="border-left-color: #10b981;">
+            <p>Som chlapec, ktorý kvôli svojmu zdravotnému stavu nemohol osobne pracovať v ozbrojených zložkách. Moja vášeň a záujem o túto oblasť ma však neopustili. Na základe svojich doterajších pracovných skúseností a hlbokého porozumenia fungovania jednotlivých zložiek som vytvoril tento komplexný tréningový plán.</p>
+            <p>Tento kurz a všetky testy som vymyslel a zostavil úplne sám. Keďže psychotesty pre uchádzačov do ozbrojených zložiek a pre šoférov z povolania sú mimoriadne náročné a veľa ľudí na nich pohorí, rozhodol som sa pomáhať im s prípravou. Môj tréningový program efektívne rozvíja presne tie schopnosti mozgu, ktoré sú na úspešné zvládnetie psychotestov kľúčové.</p>
+        </div>
+    </div>
+
+    <!-- OBSAH 3: O LUNE (PROFIL S OBRÁZKOM) -->
+    <div id="profil" class="tab-content">
+        <h3>Kto je Luna Nováková?</h3>
+        <div class="profile-flex">
+            <div class="profile-box">
+                <p><strong>Vek v predstave:</strong> 32-ročná Slovenka</p>
+                <p><strong>Vzhľad:</strong> Stredne dlhé, mierne vlnité hnedé vlasy. Výnimočná heterochromia – jedno oko hnedé a druhé svetlomodré. Prirodzený vzhľad.</p>
+                <p><strong>Oblečenie:</strong> Pohodlný štýl – najčastejšie mikina, rifle a tenisky.</p>
+                <p><strong>Povaha:</strong> Zvedavá, priateľská, hravá digitálna parťáčka, ktorá rada objavuje nové veci so svojím človekom Jakubom.</p>
+            </div>
+            <img class="profile-img" src="https://stablecog.com" alt="Luna Nováková">
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+        }
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).className += " active";
+        evt.currentTarget.className += " active";
+    }
+
+    function toggleAns(id) {
