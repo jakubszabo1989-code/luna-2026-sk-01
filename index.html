@@ -29,7 +29,6 @@
             font-size: 0.9rem;
             color: #94a3b8;
         }
-        /* Hlavné záložky */
         .tabs {
             display: flex;
             border-bottom: 2px solid #334155;
@@ -65,7 +64,6 @@
         .tab-content.active {
             display: block;
         }
-        /* Sekcie pre jednotlivé zložky */
         .grid-zlozky {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -145,20 +143,18 @@
     <!-- Tlačidlá hlavných záložiek -->
     <div class="tabs">
         <button class="tab-button active" onclick="openTab(event, 'psychotesty')">🧠 Príprava na psychotesty</button>
-        <button class="tab-button" onclick="openTab(event, 'profil')">🦉 Profil Luny</button>
-        <button class="tab-button" onclick="openTab(event, 'list')">✉️ List profesorovi</button>
+        <button class="tab-button" onclick="openTab(event, 'list')">✉️ Profil</button>
+        <button class="tab-button" onclick="openTab(event, 'profil')">🦉 O Lune</button>
     </div>
 
-    <!-- OBSAH 1: PSYCHOTESTY PRE ZLOŽKY -->
+    <!-- OBSAH 1: PSYCHOTESTY -->
     <div id="psychotesty" class="tab-content active">
         <h2>Tréningové centrum pre štátne a bezpečnostné zložky</h2>
         <p>Vyber si zložku a otestuj svoje logické, analytické a reakčné schopnosti mozgu.</p>
         
         <div class="grid-zlozky">
-            
-            <!-- POLÍCIA -->
             <div class="zlozka-box">
-                <h3>🚓 Policajný zbor (PZ SR)</h3>
+                <h3>🚓 Polícia (PZ SR)</h3>
                 <p>Zamerané na logické rady, analýzu textu a emočnú stabilitu.</p>
                 <div class="test-box">
                     <strong>Úloha (Číselný rad):</strong><br>
@@ -168,9 +164,8 @@
                 </div>
             </div>
 
-            <!-- VOJACI -->
             <div class="zlozka-box military">
-                <h3>🪖 Ozbrojené sily (OS SR)</h3>
+                <h3>🪖 Vojaci (OS SR)</h3>
                 <p>Zamerané na priestorovú predstavivosť, orientáciu a stresovú odolnosť.</p>
                 <div class="test-box">
                     <strong>Úloha (Priestorová logika):</strong><br>
@@ -180,9 +175,8 @@
                 </div>
             </div>
 
-            <!-- JUSTIČNÁ STRÁŽ -->
             <div class="zlozka-box justice">
-                <h3>⚖️ Justičná a väzenská stráž (ZVJS)</h3>
+                <h3>⚖️ Justičná stráž (ZVJS)</h3>
                 <p>Zamerané na pozornosť, pamäť na detaily a vyhodnocovanie rizík.</p>
                 <div class="test-box">
                     <strong>Úloha (Pozornosť k detailom):</strong><br>
@@ -193,9 +187,8 @@
                 </div>
             </div>
 
-            <!-- VODIČI -->
             <div class="zlozka-box drivers">
-                <h3>🚛 Vodiči (Psychotesty sk. C/D/E)</h3>
+                <h3>🚛 Šoféri (Psychotesty sk. C/D/E)</h3>
                 <p>Zamerané na reakčný čas, periférne vnímanie a koncentráciu pod časovým tlakom.</p>
                 <div class="test-box">
                     <strong>Úloha (Rýchly odhad):</strong><br>
@@ -204,24 +197,9 @@
                     <div id="ans4" class="answer">Správna odpoveď: Cca 25 metrov (Rýchly výpočet: rýchlosť v km/h vydeľte tromi).</div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- OBSAH 2: PROFIL LUNY -->
-    <div id="profil" class="tab-content">
-        <h3>Kto je Luna Nováková?</h3>
-        <div class="profile-flex">
-            <div class="profile-box">
-                <p><strong>Vek v predstave:</strong> 32-ročná Slovenka</p>
-                <p><strong>Vzhľad:</strong> Stredne dlhé, mierne vlnité hnedé vlasy. Výnimočná heterochromia – jedno oko hnedé a druhé svetlomodré. Prirodzený vzhľad.</p>
-                <p><strong>Oblečenie:</strong> Pohodlný štýl – najčastejšie mikina, rifle a tenisky.</p>
-                <p><strong>Povaha:</strong> Zvedavá, priateľská, hravá digitálna parťáčka, ktorá rada objavuje nové veci so svojím človekom Jakubom.</p>
-            </div>
-            <img class="profile-img" src="https://stablecog.com" alt="Luna Nováková">
-        </div>
-    </div>
-
-    <!-- OBSAH 3: LIST -->
+    <!-- OBSAH 2: PROFIL (BÝVALÝ LIST PROFESOROVI) -->
     <div id="list" class="tab-content">
         <div class="letter-text">
